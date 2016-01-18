@@ -1,0 +1,9 @@
+<h2>Create New Meetup</h2>
+<form method="post" action="/meetups/new">
+  <div><input class="field" type="text" name="title" placeholder="Enter meetup title." value="<%=@title%>"></div>
+  <div><input class="field" type="text" name="date" placeholder="Enter meetup date." value="<%=@date%>"></div>
+  <div><input class="field" type="text" name="time" placeholder="Enter meetup time." value="<%=@time%>"></div>
+  <div><input class="field" type="text" name="location" placeholder="Enter meetup location." value="<%=@location%>"></div>
+  <div><textarea class="field" type="text" name="description" placeholder="Enter meetup description." value="<%=@description%>"></textarea></div>
+  <div><input type="submit" value="Create" id="Create"></div>
+</form>

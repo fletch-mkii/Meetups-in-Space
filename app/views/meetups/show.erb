@@ -1,0 +1,17 @@
+<li>Name: <%=@meetup[:title]%></li>
+<li>Owner: <%=@meetup[:creator]%></li>
+<li>Date: <%=@meetup[:date]%></li>
+<li>Time: <%=@meetup[:time]%></li>
+<li>Location: <%=@meetup[:location]%></li>
+<li>Description: <%=@meetup[:description]%></li>
+
+<%if @not_member.nil?%>
+  <form method="post" action="/meetups/join">
+    <div><input type="submit" value="Join Meetup" id="Join"></div>
+  </form>
+<%end%>
+
+<h3>List of Members:</h3>
+<%@members.each do |member|%>
+  <li><%= member[:username] %></li>
+<%end%>

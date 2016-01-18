@@ -1,0 +1,6 @@
+<h1>Meetups</h1>
+<%@meetups.each do |meetup|%>
+  <a href="<%='/meetups/' + meetup.id.to_s%>"><li><%=meetup[:title]%></li></a>
+<%end%>
+
+  <h3><a href="/signincheck">Create New Meetup</a></h3>
